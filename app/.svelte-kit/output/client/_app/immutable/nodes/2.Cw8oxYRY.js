@@ -1,0 +1,1 @@
+import{a as o,t as a}from"../chunks/disclose-version.CC7x_6kz.js";import"../chunks/legacy.BkEPvv3i.js";var p=a("<h1>One more time with feeling...</h1>");function n(e){var t=p();o(e,t)}export{n as component};
