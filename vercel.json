@@ -1,0 +1,15 @@
+{
+  "builds": [
+    {
+      "src": "app/package.json",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app/$1"
+    }
+  ],
+  "version": 1
+}
