@@ -8,7 +8,8 @@ import { browserslistToTargets } from 'lightningcss'
 export default () => {
   return defineConfig({
     build: {
-      cssMinify: 'lightningcss'
+      cssMinify: 'lightningcss',
+      outDir: 'public'
     },
 
     css: {
