@@ -1,13 +1,17 @@
-// See https://svelte.dev/docs/kit/types#app.d.ts
-// for information about these interfaces
+export {}
+
+
 declare global {
+	interface Window {
+		dataLayer: Record<string, any>[]
+	}
 	namespace App {
 		// interface Error {}
-		// interface Locals {}
+		interface Locals {
+			gtmId: string | null
+		}
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}
 	}
 }
-
-export {};
