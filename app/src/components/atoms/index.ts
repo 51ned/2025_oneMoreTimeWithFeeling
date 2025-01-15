@@ -1,5 +1,6 @@
 export { default as Button } from './button.svelte'
 export { default as Card } from './card.svelte'
+export { default as Cardlist } from './cardlist.svelte'
 export { default as H } from './heading.svelte'
 export { default as Link } from './link.svelte'
 export { default as Txt } from  './text.svelte'
