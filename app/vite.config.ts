@@ -1,11 +1,12 @@
+import browserslist from 'browserslist'
 import path from 'path'
 
 import { defineConfig } from 'vite'
 import type { ConfigEnv } from 'vite'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 import { sveltekit } from '@sveltejs/kit/vite'
 
-import browserslist from 'browserslist'
 import { browserslistToTargets } from 'lightningcss'
 
 
@@ -39,7 +40,8 @@ export default ({ mode }: ConfigEnv) => {
     },
 
     plugins: [
-      sveltekit()
+      sveltekit(),
+      tsconfigPaths()
     ]
 
     // server: {
