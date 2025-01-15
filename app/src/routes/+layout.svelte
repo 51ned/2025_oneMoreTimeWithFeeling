@@ -1,6 +1,8 @@
 <script lang='ts'>
   import type { Snippet } from 'svelte'
+
   import { GTM } from 'utils/.'
+  import 'styles/index.css'
 
   const gtmId = import.meta.env.VITE_GTM_ID
 
@@ -12,6 +14,8 @@
 </script>
 
 
-<GTM />
+{#if process.env.NODE_ENV === 'production'}
+  <GTM />
+{/if}
 
-{@render children() }
+{@render children()}
