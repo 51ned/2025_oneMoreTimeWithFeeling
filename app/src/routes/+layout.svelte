@@ -5,8 +5,6 @@
   import { GTM } from 'utils/.'
   import 'styles/index.css'
 
-  const gtmId = import.meta.env.VITE_GTM_ID
-
   interface LayoutProps {
     children: Snippet
   }
