@@ -9,10 +9,10 @@
 
   let { children, lvl = 1 }: HeadingProps = $props()
 
-  const headingClass = cn('heading', {
-    'heading-level-1': lvl === 1,
-    'heading-level-2': lvl === 2,
-    'heading-level-3': lvl === 3
+  const headingClass = cn('h', {
+    'h-lvl-1': lvl === 1,
+    'h-lvl-2': lvl === 2,
+    'h-lvl-3': lvl === 3
   })
 </script>
 
@@ -26,13 +26,13 @@
 
 
 <style>
-  .heading {
+  .h {
     font-weight: var(--heading-fw);
     line-height: var(--heading-lh);
     margin: 0 0 var(--indent-16-20) 0;
   }
 
-  .heading-level-1 { font-size: var(--h1-fs); }
-  .heading-level-2 { font-size: var(--h2-fs); }
-  .heading-level-3 { font-size: var(--h3-fs); }
+  .h-lvl-1 { font-size: var(--h1-fs); }
+  .h-lvl-2 { font-size: var(--h2-fs); }
+  .h-lvl-3 { font-size: var(--h3-fs); }
 </style>
