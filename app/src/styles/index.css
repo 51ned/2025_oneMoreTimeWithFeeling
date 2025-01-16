@@ -27,3 +27,19 @@ html {
     color-scheme: light;
   } */
 }
+
+body {
+  display: grid;
+  gap: 0 var(--indent-16-24);
+  grid-template-columns: 
+    [fullbleed-start] minmax(0, 1fr)
+    [content-start] 1240px
+    [content-end] minmax(0, 1fr)
+    [fullbleed-end];
+  grid-template-rows:
+    [navbar] min-content
+    [header] min-content
+    [main] 1fr
+    [footer] min-content;
+  margin: 0;
+}
