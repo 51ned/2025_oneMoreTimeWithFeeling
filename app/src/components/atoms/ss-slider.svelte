@@ -23,7 +23,7 @@
     overflow-x: auto;
     /* padding: 0 var(--indent-16-24); */
     scroll-padding: var(--indent-16-24);
-    scroll-snap-type: x proximity;
+    scroll-snap-type: x mandatory;
   } 
 
   .ss-slider::-webkit-scrollbar {
@@ -36,7 +36,7 @@
 
   .rtl {
     direction: rtl;
-    
+    padding: 0 calc(var(--indent-16-24) * 2) 0 var(--indent-16-24);
   }
 
   :global(.ss-slider > *) {
@@ -45,6 +45,6 @@
   }
 
   :global(.ss-slider.rtl > *) {
-    direction: ltr;
+    text-align: left;
   }
 </style>
