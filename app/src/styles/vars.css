@@ -15,6 +15,8 @@
   --indent-8-12: clamp(8px, var(--preferred), 12px);
   --indent-4-8: clamp(4px, var(--preferred), 8px);
 
+  --layout-width: 1240px;
+
   /* Typography */
 
   --smallest-fs: 0.75rem;

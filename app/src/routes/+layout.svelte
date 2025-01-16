@@ -1,7 +1,7 @@
 <script lang='ts'>
   import type { Snippet } from 'svelte'
 
-  import { Navbar } from 'ui/.'
+  import { Footer, Main, Navbar } from 'ui/.'
   import { GTM } from 'utils/.'
   import 'styles/index.css'
 
@@ -19,4 +19,8 @@
 
 <Navbar />
 
-{@render children()}
+<Main>
+  {@render children()}
+</Main>
+
+<Footer />

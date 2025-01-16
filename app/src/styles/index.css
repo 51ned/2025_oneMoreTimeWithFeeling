@@ -13,33 +13,24 @@
 }
 
 html {
-  /* color-scheme: light dark; */
   font-family: 'Montserrat';
   font-size: 100%;
   scroll-behavior: smooth;
   touch-action: manipulation;
-
-  /* &:has(input[value='dark']:checked) {
-    color-scheme: dark;
-  }
-  
-  &:has(input[value='light']:checked) {
-    color-scheme: light;
-  } */
 }
 
 body {
   display: grid;
-  gap: 0 var(--indent-16-24);
   grid-template-columns: 
-    [fullbleed-start] minmax(0, 1fr)
-    [content-start] 1240px
-    [content-end] minmax(0, 1fr)
+    [fullbleed-start] 1fr
+    [content-start] minmax(0, var(--layout-width))
+    [content-end] 1fr
     [fullbleed-end];
   grid-template-rows:
     [navbar] min-content
     [header] min-content
     [main] 1fr
     [footer] min-content;
+  height: 100vh;
   margin: 0;
 }

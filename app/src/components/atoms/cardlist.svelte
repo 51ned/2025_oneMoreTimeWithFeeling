@@ -9,13 +9,13 @@
 </script>
 
 
-<section class='crdlst'>
+<section class='cardlist'>
   {@render children()}
 </section>
 
 
 <style>
-  .crdlst {
+  .cardlist {
     display: grid;
     gap: var(--indent-16-24);
     grid-auto-rows: auto 1fr;

@@ -3,15 +3,15 @@
 </script>
 
 
-<Wrap customStyle='navbar' tag='div'>
+<Wrap tag='footer'>
   <Container tag='div'>
-    <p>Navbar</p>
+    <p>Footer</p>
   </Container>
 </Wrap>
 
 
 <style>
-  :global(.navbar) {
-    grid-row: navbar;
+  :global(footer) {
+    grid-row: footer;
   }
 </style>

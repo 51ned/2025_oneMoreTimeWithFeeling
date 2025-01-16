@@ -2,18 +2,18 @@
   import cn from 'classnames'
   import type { Snippet } from 'svelte'
 
-  interface WrapProps {
+  interface ContainerProps {
     children: Snippet,
     customStyle?: string,
     tag: string
   }
 
-  let { children, customStyle, tag }: WrapProps = $props()
+  let { children, customStyle, tag }: ContainerProps = $props()
 </script>
 
 
 <svelte:element
-  class={cn('wrap', customStyle)}
+  class={cn('container', customStyle)}
   this={tag}
 >
 	{@render children()}
@@ -21,9 +21,9 @@
 
 
 <style>
-  .wrap {
+  .container {
     display: grid;
-    grid-column: fullbleed;
+    grid-column: content;
     grid-template-columns: subgrid;
   }
 </style>
