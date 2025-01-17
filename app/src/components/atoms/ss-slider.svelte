@@ -45,6 +45,6 @@
   }
 
   :global(.ss-slider.rtl > *) {
-    direction: ltr;
+    text-align: left;
   }
 </style>
