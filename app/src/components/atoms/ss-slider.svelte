@@ -21,10 +21,14 @@
     display: flex;
     gap: var(--indent-16-24);
     overflow-x: auto;
-    /* padding: 0 var(--indent-16-24); */
-    scroll-padding: var(--indent-16-24);
-    scroll-snap-type: x proximity;
+    scroll-snap-align: center;
+    scroll-snap-type: x mandatory;
   } 
+
+  :global(.ss-slider > *) {
+    min-width: calc(100% - var(--indent-16-24));
+    scroll-snap-align: center;
+  }
 
   .ss-slider::-webkit-scrollbar {
     display: none;
@@ -32,16 +36,12 @@
 
   .ltr {
     direction: ltr;
+    padding: 0 var(--indent-16-24) 0 var(--indent-32-48);
   }
 
   .rtl {
     direction: rtl;
-    
-  }
-
-  :global(.ss-slider > *) {
-    min-width: calc(100% - 36px);
-    scroll-snap-align: center;
+    padding: 0 var(--indent-32-48) 0 var(--indent-16-24);
   }
 
   :global(.ss-slider.rtl > *) {
