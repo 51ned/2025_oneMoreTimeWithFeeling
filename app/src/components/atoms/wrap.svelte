@@ -4,16 +4,16 @@
 
   interface WrapProps {
     children: Snippet,
-    customStyle?: string,
-    tag: string
+    customClass?: string,
+    tag: keyof HTMLElementTagNameMap
   }
 
-  let { children, customStyle, tag }: WrapProps = $props()
+  let { children, customClass, tag }: WrapProps = $props()
 </script>
 
 
 <svelte:element
-  class={cn('wrap', customStyle)}
+  class={cn('wrap', customClass)}
   this={tag}
 >
 	{@render children()}

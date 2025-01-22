@@ -4,16 +4,16 @@
 
   interface ScrollsnapSlider {
     children: Snippet,
-    dir: 'rtl' | 'ltr'
+    dir?: 'rtl' | 'ltr'
   }
 
-  let { children, dir }: ScrollsnapSlider = $props()
+  let { children, dir='ltr' }: ScrollsnapSlider = $props()
 </script>
 
 
-<section class={cn('ss-slider', dir)}>
+<div class={cn('ss-slider', dir)}>
   {@render children()}
-</section>
+</div>
 
 
 <style>

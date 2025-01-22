@@ -2,18 +2,18 @@
   import cn from 'classnames'
   import type { Snippet } from 'svelte'
 
-  interface ContainerProps {
+  interface SimpleCardProps {
     children: Snippet,
     customClass?: string,
     tag: keyof HTMLElementTagNameMap
   }
 
-  let { children, customClass, tag }: ContainerProps = $props()
+  let { children, customClass, tag }: SimpleCardProps = $props()
 </script>
 
 
 <svelte:element
-  class={cn('container', customClass)}
+  class={cn('card', customClass)}
   this={tag}
 >
 	{@render children()}
@@ -21,9 +21,7 @@
 
 
 <style>
-  .container {
-    display: grid;
-    grid-column: content;
-    grid-template-columns: subgrid;
+  .card {
+    padding: var(--indent-16-24);
   }
 </style>

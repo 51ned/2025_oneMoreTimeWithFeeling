@@ -1,17 +1,17 @@
 <script lang='ts'>
   import type { Snippet } from 'svelte'
 
-  interface CardlistProps {
+  interface CardListProps {
     children: Snippet
   }
 
-  let { children }: CardlistProps = $props()
+  let { children }: CardListProps = $props()
 </script>
 
 
-<section class='cardlist'>
+<div class='cardlist'>
   {@render children()}
-</section>
+</div>
 
 
 <style>
