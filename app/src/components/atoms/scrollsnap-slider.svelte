@@ -16,6 +16,7 @@
 </div>
 
 
+<!-- svelte-ignore css_unused_selector -->
 <style>
   .ss-slider {
     display: flex;
@@ -25,7 +26,7 @@
     scroll-snap-type: x mandatory;
   } 
 
-  :global(.ss-slider > *) {
+  .ss-slider > * {
     min-width: calc(100% - var(--indent-16-24));
     scroll-snap-align: center;
   }
@@ -44,7 +45,7 @@
     padding: 0 var(--indent-32-48) 0 var(--indent-16-24);
   }
 
-  :global(.ss-slider.rtl > *) {
+  .ss-slider.rtl > * {
     text-align: left;
   }
 </style>

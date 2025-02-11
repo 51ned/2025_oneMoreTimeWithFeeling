@@ -19,6 +19,7 @@
 
 <style>
   :global(main) {
+    display: grid;
     grid-row: main;
   }
 </style>

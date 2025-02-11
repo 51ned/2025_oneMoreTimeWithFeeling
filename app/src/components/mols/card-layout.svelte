@@ -9,19 +9,19 @@
 
   interface CardLayoutProps {
     children: Snippet,
-    sliderDir?: 'ltr' | 'rtl'
+    dir?: 'ltr' | 'rtl'
   }
 
   let windowInnerWidth: number = $state(0)
   let isMobile = $state(false)
 
   $effect(() => {
-		isMobile = BREAKPOINTS.M > windowInnerWidth
+		isMobile = windowInnerWidth < BREAKPOINTS.M
 	})
   
   let {
     children,
-    sliderDir = 'ltr'
+    dir = 'ltr'
   }: CardLayoutProps = $props()
 </script>
 
@@ -30,7 +30,7 @@
 
 
 {#if isMobile}
-  <ScrollsnapSlider dir={sliderDir}>
+  <ScrollsnapSlider dir={dir}>
     {@render children()}
   </ScrollsnapSlider>
 {:else}

@@ -22,7 +22,7 @@
   let otherAttrs: {[key: string]: boolean | string | undefined} = {}
 
   switch (customClass) {
-    case ('acc-card'):
+    case 'acc-card':
       otherAttrs['hidden'] = !isHidden
       break
     case 'tab-panel':
