@@ -1,4 +1,5 @@
 <script lang='ts'>
+  import { SimpleButton } from 'components/atoms'
   import { CardLayout } from 'components/mols'
 </script>
 
@@ -16,3 +17,22 @@
   <div style='background-color: #ff8100'>Card # 7</div>
   <div style='background-color: #ffcd00'>Card # 8</div>
 </CardLayout>
+
+<SimpleButton
+  handleClick={() => {}}
+  id='button1'
+  type='button'
+  variant='regular'
+>
+  Regular button
+</SimpleButton>
+
+<SimpleButton
+  handleClick={() => {}}
+  id='button2'
+  type='button'
+  variant='stripped'
+>
+  Stripped button
+</SimpleButton>
+

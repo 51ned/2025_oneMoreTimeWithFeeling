@@ -6,22 +6,22 @@
     children: Snippet,
     handleClick: () => void,
     id: string,
-    style: 'regular' | 'stripped',
-    type: 'button' | 'reset' | 'submit'
+    type: 'button' | 'reset' | 'submit',
+    variant: 'regular' | 'stripped'
   }
 
   let {
     children,
     handleClick,
     id,
-    style,
-    type
+    type,
+    variant
   }: SimpleButtonProps = $props()
 </script>
 
 
 <button
-  class={cn(style)}
+  class={cn(variant)}
   id={id}
   onclick={handleClick}
   type={type}

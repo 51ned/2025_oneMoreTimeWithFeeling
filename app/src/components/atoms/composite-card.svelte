@@ -3,25 +3,23 @@
 
   interface CompositeCardProps {
     children: Snippet,
-    controlledID: string,
-    controllingID: string,
-    customClass: 'acc-card' | 'dialog' | 'tab-panel',
+    id: string,
     isHidden: boolean,
-    tag: keyof HTMLElementTagNameMap
+    tag: keyof HTMLElementTagNameMap,
+    variant: 'acc-card' | 'dialog' | 'tab-panel'
   }
 
   let {
     children,
-    controlledID,
-    controllingID,
-    customClass,
+    id,
     isHidden,
-    tag
+    tag,
+    variant
   }: CompositeCardProps = $props()
 
   let otherAttrs: {[key: string]: boolean | string | undefined} = {}
 
-  switch (customClass) {
+  switch (variant) {
     case 'acc-card':
       otherAttrs['hidden'] = !isHidden
       break
@@ -37,9 +35,8 @@
 
 
 <svelte:element
-  aria-labelledby={controllingID}
-  class={customClass}
-  id={controlledID}
+  class={variant}
+  id={id}
   this={tag}
   {...otherAttrs}
 >
