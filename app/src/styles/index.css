@@ -1,5 +1,6 @@
 @import url(vars.css);
 
+
 @font-face {
   font-display: optional;
   font-family: 'Montserrat';
@@ -33,4 +34,8 @@ body {
     [footer] min-content;
   height: 100vh;
   margin: 0;
+}
+
+.button {
+  cursor: pointer;
 }

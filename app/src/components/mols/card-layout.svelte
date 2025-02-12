@@ -9,11 +9,11 @@
 
   interface CardLayoutProps {
     children: Snippet,
-    dir?: 'ltr' | 'rtl'
+    dir: 'ltr' | 'rtl'
   }
 
-  let windowInnerWidth: number = $state(0)
-  let isMobile = $state(false)
+  let windowInnerWidth = $state(0)
+  let isMobile = $state()
 
   $effect(() => {
 		isMobile = windowInnerWidth < BREAKPOINTS.M

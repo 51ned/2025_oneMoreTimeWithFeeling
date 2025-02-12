@@ -1,7 +1,7 @@
 <script lang='ts'>
   import type { Snippet } from 'svelte'
 
-  interface InteractiveCardProps {
+  interface CompositeCardProps {
     children: Snippet,
     controlledID: string,
     controllingID: string,
@@ -17,7 +17,7 @@
     customClass,
     isHidden,
     tag
-  }: InteractiveCardProps = $props()
+  }: CompositeCardProps = $props()
 
   let otherAttrs: {[key: string]: boolean | string | undefined} = {}
 

@@ -4,10 +4,10 @@
 
   interface ScrollsnapSlider {
     children: Snippet,
-    dir?: 'rtl' | 'ltr'
+    dir: 'rtl' | 'ltr'
   }
 
-  let { children, dir='ltr' }: ScrollsnapSlider = $props()
+  let { children, dir }: ScrollsnapSlider = $props()
 </script>
 
 
@@ -16,7 +16,6 @@
 </div>
 
 
-<!-- svelte-ignore css_unused_selector -->
 <style>
   .ss-slider {
     display: flex;
@@ -26,13 +25,13 @@
     scroll-snap-type: x mandatory;
   } 
 
-  .ss-slider > * {
-    min-width: calc(100% - var(--indent-16-24));
-    scroll-snap-align: center;
-  }
-
   .ss-slider::-webkit-scrollbar {
     display: none;
+  }
+
+  :global(.ss-slider > *) {
+    min-width: calc(100vw - var(--indent-16-24));
+    scroll-snap-align: center;
   }
 
   .ltr {
@@ -45,7 +44,7 @@
     padding: 0 var(--indent-32-48) 0 var(--indent-16-24);
   }
 
-  .ss-slider.rtl > * {
+  :global(.ss-slider.rtl > *) {
     text-align: left;
   }
 </style>

@@ -26,7 +26,6 @@
 </svelte:element>
 
 
-<!-- svelte-ignore css_unused_selector -->
 <style>
   .list {
     list-style: none;
@@ -48,16 +47,16 @@
     gap: var(--indent-16-24);
   }
 
-  .ordered {
+  :global(.ordered) {
     counter-reset: num;
   }
 
-  .ordered > li {
+  :global(.ordered > li) {
     padding-left: var(--indent-24-32);
     position: relative;
   }
 
-  .ordered > li::after {
+  :global(.ordered > li::after) {
     content: counter(num) '.'; 
     counter-increment: num;
     left: 0;
@@ -65,12 +64,12 @@
     top: 0;
   }
 
-  .unordered > li {
+  :global(.unordered > li) {
     padding-left: var(--indent-32-24);
     position: relative;
   }
 
-  .unordered > li::after {
+  :global(.unordered > li::after) {
     background-color: var(--bg-black);
     border-radius: 50%;
     height: var(--base);
